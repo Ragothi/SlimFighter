@@ -1,0 +1,2 @@
+# SlimFighter
+  Fight countless enemies in this simple and funny android game!  You can fight one of 10 enemies (physical or magical type)  using one of 4 random actions(physical attack, magical attack, heal or defend)  The Harvest activity is also added where you can grow plants and use them to upgrade your stats  Game contains few bugs that due to work with defending degree I don't have time to correct right now

@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue_A400"
+    android:theme="@style/ThemeOverlay.SlimFighter.FullscreenContainer"
+    tools:context=".MainActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fightLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:visibility="gone">
+
+        <ImageView
+            android:id="@+id/healthbarFront"
+            android:layout_width="200dp"
+            android:layout_height="25dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/actionLeft"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/progressbarbackground" />
+
+        <ImageView
+            android:id="@+id/enemy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enemyName"
+            app:srcCompat="@drawable/slime" />
+
+        <TextView
+            android:id="@+id/enemyHealth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:text="HP 10/10"
+            app:layout_constraintStart_toStartOf="@+id/enemy"
+            app:layout_constraintTop_toBottomOf="@+id/enemy" />
+
+        <TextView
+            android:id="@+id/playerHealth"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="20/20"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/healthbarFront"
+            app:layout_constraintEnd_toEndOf="@+id/healthbarFront"
+            app:layout_constraintStart_toStartOf="@+id/healthbarFront"
+            app:layout_constraintTop_toTopOf="@+id/healthbarFront" />
+
+        <TextView
+            android:id="@+id/playerShield"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="2"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/actionRight"
+            app:layout_constraintEnd_toStartOf="@+id/imageView7" />
+
+        <TextView
+            android:id="@+id/enemyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="@+id/enemyName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/enemyName" />
+
+        <TextView
+            android:id="@+id/toNextEnemyAttack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintBaseline_toBaselineOf="@+id/enemyName"
+            app:layout_constraintEnd_toStartOf="@+id/imageView4" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toEndOf="@+id/enemyHealth"
+            app:layout_constraintTop_toBottomOf="@+id/enemy"
+            app:srcCompat="@drawable/hp" />
+
+        <ImageView
+            android:id="@+id/enemyAttackType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/enemyATK"
+            app:layout_constraintStart_toEndOf="@+id/enemyATK"
+            app:layout_constraintTop_toTopOf="@+id/enemyATK"
+            app:srcCompat="@drawable/atk" />
+
+        <TextView
+            android:id="@+id/enemyATK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="TextView"
+            app:layout_constraintBaseline_toBaselineOf="@+id/enemyHealth"
+            app:layout_constraintStart_toEndOf="@+id/imageView5" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/playerShield"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/playerShield"
+            app:srcCompat="@drawable/def" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintBottom_toBottomOf="@+id/toNextEnemyAttack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/toNextEnemyAttack"
+            app:srcCompat="@drawable/time" />
+
+        <ImageView
+            android:id="@+id/healthbarBackground"
+            android:layout_width="200dp"
+            android:layout_height="25dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/actionRight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/progressbarbackground" />
+
+        <ImageView
+            android:id="@+id/goldbagIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintBottom_toBottomOf="@+id/goldAmount"
+            app:layout_constraintStart_toEndOf="@+id/goldAmount"
+            app:layout_constraintTop_toTopOf="@+id/goldAmount"
+            app:srcCompat="@drawable/justgold2" />
+
+        <TextView
+            android:id="@+id/goldAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="100"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/playerHealth"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/shop"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/enterHarvest"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enterHarvest"
+            app:srcCompat="@drawable/shop" />
+
+        <ImageView
+            android:id="@+id/enterHarvest"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/harvestsign"
+            app:layout_constraintEnd_toStartOf="@+id/enemy"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/enemy" />
+
+        <ImageView
+            android:id="@+id/actionLeft"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/base" />
+
+        <ImageView
+            android:id="@+id/actionRight"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/base" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/statsContainer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/healthbarFront"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enemyHealth">
+
+            <ImageView
+                android:id="@+id/imageView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/magicStatText"
+                app:layout_constraintStart_toEndOf="@+id/magicStatText"
+                app:layout_constraintTop_toTopOf="@+id/magicStatText"
+                app:srcCompat="@drawable/mgk" />
+
+            <TextView
+                android:id="@+id/atkStatText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="-1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/atkStatText"
+                app:layout_constraintStart_toEndOf="@+id/atkStatText"
+                app:layout_constraintTop_toTopOf="@+id/atkStatText"
+                app:srcCompat="@drawable/atk" />
+
+            <TextView
+                android:id="@+id/magicStatText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="-2"
+                app:layout_constraintStart_toStartOf="@+id/atkStatText"
+                app:layout_constraintTop_toBottomOf="@+id/atkStatText" />
+
+            <ImageView
+                android:id="@+id/imageView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/healStatText"
+                app:layout_constraintStart_toEndOf="@+id/healStatText"
+                app:layout_constraintTop_toTopOf="@+id/healStatText"
+                app:srcCompat="@drawable/hp" />
+
+            <TextView
+                android:id="@+id/healStatText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="-3"
+                app:layout_constraintBaseline_toBaselineOf="@+id/atkStatText"
+                app:layout_constraintStart_toEndOf="@+id/imageView17" />
+
+            <TextView
+                android:id="@+id/shieldStatText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-4"
+                app:layout_constraintBaseline_toBaselineOf="@+id/magicStatText"
+                app:layout_constraintStart_toStartOf="@+id/healStatText" />
+
+            <ImageView
+                android:id="@+id/imageView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/shieldStatText"
+                app:layout_constraintStart_toEndOf="@+id/shieldStatText"
+                app:layout_constraintTop_toTopOf="@+id/shieldStatText"
+                app:srcCompat="@drawable/def" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/shopLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/buyMagicBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="128dp"
+            app:layout_constraintBottom_toTopOf="@+id/closeShop"
+            app:layout_constraintEnd_toEndOf="@+id/magicDisplayShop"
+            app:layout_constraintStart_toStartOf="@+id/magicDisplayShop"
+            app:layout_constraintTop_toBottomOf="@+id/magicDisplayShop"
+            app:srcCompat="@drawable/shopbackground" />
+
+        <ImageView
+            android:id="@+id/buyHealBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/shieldDisplayShop"
+            app:layout_constraintEnd_toEndOf="@+id/healDisplayShop"
+            app:layout_constraintStart_toStartOf="@+id/healDisplayShop"
+            app:layout_constraintTop_toBottomOf="@+id/healDisplayShop"
+            app:srcCompat="@drawable/shopbackground" />
+
+        <ImageView
+            android:id="@+id/buyHealIcon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:scaleType="fitStart"
+            app:layout_constraintBottom_toBottomOf="@+id/buyHealBack"
+            app:layout_constraintEnd_toEndOf="@+id/buyHealBack"
+            app:layout_constraintStart_toEndOf="@+id/buyHealText"
+            app:layout_constraintTop_toTopOf="@+id/buyHealBack"
+            app:srcCompat="@drawable/justgold2" />
+
+        <TextView
+            android:id="@+id/buyHealText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:text="100"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/buyHealBack"
+            app:layout_constraintEnd_toEndOf="@+id/buyHealBack"
+            app:layout_constraintStart_toStartOf="@+id/buyHealBack"
+            app:layout_constraintTop_toTopOf="@+id/buyHealBack" />
+
+        <ImageView
+            android:id="@+id/attackDisplayShop"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/buyAtkBack"
+            app:layout_constraintEnd_toStartOf="@+id/healDisplayShop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView10"
+            app:srcCompat="@drawable/attack" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="SHOP"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/healDisplayShop"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/attackDisplayShop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/attackDisplayShop"
+            app:layout_constraintTop_toBottomOf="@+id/textView10"
+            app:srcCompat="@drawable/heal" />
+
+        <ImageView
+            android:id="@+id/shieldDisplayShop"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/magicDisplayShop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/magicDisplayShop"
+            app:layout_constraintTop_toTopOf="@+id/magicDisplayShop"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/shield" />
+
+        <ImageView
+            android:id="@+id/buyShieldBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="128dp"
+            app:layout_constraintBottom_toTopOf="@+id/closeShop"
+            app:layout_constraintEnd_toEndOf="@+id/shieldDisplayShop"
+            app:layout_constraintStart_toStartOf="@+id/shieldDisplayShop"
+            app:layout_constraintTop_toBottomOf="@+id/shieldDisplayShop"
+            app:srcCompat="@drawable/shopbackground" />
+
+        <ImageView
+            android:id="@+id/buyShieldIcon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:scaleType="fitStart"
+            app:layout_constraintBottom_toBottomOf="@+id/buyShieldBack"
+            app:layout_constraintEnd_toEndOf="@+id/buyShieldBack"
+            app:layout_constraintStart_toEndOf="@+id/buyShieldText"
+            app:layout_constraintTop_toTopOf="@+id/buyShieldBack"
+            app:srcCompat="@drawable/justgold2" />
+
+        <TextView
+            android:id="@+id/buyShieldText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:text="100"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/buyShieldBack"
+            app:layout_constraintEnd_toEndOf="@+id/buyShieldBack"
+            app:layout_constraintStart_toStartOf="@+id/buyShieldBack"
+            app:layout_constraintTop_toTopOf="@+id/buyShieldBack" />
+
+        <ImageView
+            android:id="@+id/magicDisplayShop"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/buyMagicBack"
+            app:layout_constraintEnd_toStartOf="@+id/shieldDisplayShop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buyAtkBack"
+            app:srcCompat="@drawable/magic" />
+
+        <ImageView
+            android:id="@+id/buyAtkBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/magicDisplayShop"
+            app:layout_constraintEnd_toEndOf="@+id/attackDisplayShop"
+            app:layout_constraintStart_toStartOf="@+id/attackDisplayShop"
+            app:layout_constraintTop_toBottomOf="@+id/attackDisplayShop"
+            app:srcCompat="@drawable/shopbackground" />
+
+        <ImageView
+            android:id="@+id/buyAtkIcon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:scaleType="fitStart"
+            app:layout_constraintBottom_toBottomOf="@+id/buyAtkBack"
+            app:layout_constraintEnd_toEndOf="@+id/buyAtkBack"
+            app:layout_constraintStart_toEndOf="@+id/buyAtkText"
+            app:layout_constraintTop_toTopOf="@+id/buyAtkBack"
+            app:srcCompat="@drawable/justgold2" />
+
+        <ImageView
+            android:id="@+id/buyMagicIcon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:scaleType="fitStart"
+            app:layout_constraintBottom_toBottomOf="@+id/buyMagicBack"
+            app:layout_constraintEnd_toEndOf="@+id/buyMagicBack"
+            app:layout_constraintStart_toEndOf="@+id/buyMagicText"
+            app:layout_constraintTop_toTopOf="@+id/buyMagicBack"
+            app:srcCompat="@drawable/justgold2" />
+
+        <TextView
+            android:id="@+id/buyAtkText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:text="100"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/buyAtkBack"
+            app:layout_constraintEnd_toEndOf="@+id/buyAtkBack"
+            app:layout_constraintStart_toStartOf="@+id/buyAtkBack"
+            app:layout_constraintTop_toTopOf="@+id/buyAtkBack" />
+
+        <TextView
+            android:id="@+id/buyMagicText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:text="100"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/buyMagicBack"
+            app:layout_constraintEnd_toEndOf="@+id/buyMagicBack"
+            app:layout_constraintStart_toStartOf="@+id/buyMagicBack"
+            app:layout_constraintTop_toTopOf="@+id/buyMagicBack" />
+
+        <ImageView
+            android:id="@+id/closeShop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/back" />
+
+        <Button
+            android:id="@+id/resetProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="ResetProgress"
+            app:layout_constraintBottom_toTopOf="@+id/closeShop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buyShieldBack" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

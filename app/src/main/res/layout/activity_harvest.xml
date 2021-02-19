@@ -1,0 +1,1133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#044309"
+    android:theme="@style/ThemeOverlay.SlimFighter.FullscreenContainer"
+    tools:context=".HarvestActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/harvestSkillTree"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/harvestSkillBonus4"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/harvestSkillBonus3"
+            app:layout_constraintStart_toStartOf="@+id/harvestSkillBonus3"
+            app:layout_constraintTop_toBottomOf="@+id/harvestSkillBonus3"
+            app:srcCompat="@drawable/base" />
+
+        <ImageView
+            android:id="@+id/harvestSkillBonus3"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/harvestSkillBonus2"
+            app:layout_constraintStart_toStartOf="@+id/harvestSkillBonus2"
+            app:layout_constraintTop_toBottomOf="@+id/harvestSkillBonus2"
+            app:srcCompat="@drawable/base" />
+
+        <ImageView
+            android:id="@+id/harvestSkillBonus2"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/harvestSkillBonus1"
+            app:layout_constraintStart_toStartOf="@+id/harvestSkillBonus1"
+            app:layout_constraintTop_toBottomOf="@+id/harvestSkillBonus1"
+            app:srcCompat="@drawable/base" />
+
+        <ImageView
+            android:id="@+id/harvestSkillBonus1"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView11"
+            app:srcCompat="@drawable/base" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="BONUS"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/harvestSkillBonus1"
+            app:layout_constraintStart_toStartOf="@+id/harvestSkillBonus1"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <ImageView
+            android:id="@+id/harvestSkillTier4"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/harvestSkillTier3b"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/harvestSkillTier3b"
+            app:layout_constraintTop_toBottomOf="@+id/harvestSkillTier3b"
+            app:srcCompat="@drawable/chabr" />
+
+        <ImageView
+            android:id="@+id/harvestSkillTier3c"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/harvestSkillTier3b"
+            app:layout_constraintStart_toEndOf="@+id/harvestSkillTier3b"
+            app:layout_constraintTop_toTopOf="@+id/harvestSkillTier3b"
+            app:srcCompat="@drawable/mushrom" />
+
+        <ImageView
+            android:id="@+id/harvestSkillTier3b"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/harvestSkillTier3a"
+            app:layout_constraintStart_toEndOf="@+id/harvestSkillTier3a"
+            app:layout_constraintTop_toTopOf="@+id/harvestSkillTier3a"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/watergrass" />
+
+        <ImageView
+            android:id="@+id/harvestSkillTier3a"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/harvestSkillTier2a"
+            app:srcCompat="@drawable/tulips" />
+
+        <ImageView
+            android:id="@+id/harvestSkillTier2b"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="40dp"
+            app:layout_constraintBottom_toBottomOf="@+id/harvestSkillTier2a"
+            app:layout_constraintEnd_toEndOf="@+id/harvestSkillTier3c"
+            app:layout_constraintStart_toEndOf="@+id/harvestSkillTier2a"
+            app:layout_constraintTop_toTopOf="@+id/harvestSkillTier2a"
+            app:srcCompat="@drawable/sunflower" />
+
+        <ImageView
+            android:id="@+id/harvestSkillTier2a"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@+id/harvestSkillTier3a"
+            app:layout_constraintTop_toBottomOf="@+id/harvestSkillTier1"
+            app:srcCompat="@drawable/rose" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="SKILL TREE"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/harvestSkillTier1"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/harvestSkillTier2b"
+            app:layout_constraintStart_toStartOf="@+id/harvestSkillTier2a"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            app:srcCompat="@drawable/daisy" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="TIER"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/harvestSkillTier1"
+            app:layout_constraintStart_toStartOf="@+id/harvestSkillTier1"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <ImageView
+            android:id="@+id/skillDescription"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/backFromHarvestSkillTree"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/harvestSkillTier4"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/emptyground" />
+
+        <TextView
+            android:id="@+id/harvestSkillBonus1Level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0/3"
+            app:layout_constraintBottom_toBottomOf="@+id/harvestSkillBonus1"
+            app:layout_constraintEnd_toEndOf="@+id/harvestSkillBonus1"
+            app:layout_constraintStart_toStartOf="@+id/harvestSkillBonus1" />
+
+        <TextView
+            android:id="@+id/harvestSkillBonus2Level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0/5"
+            app:layout_constraintBottom_toBottomOf="@+id/harvestSkillBonus2"
+            app:layout_constraintEnd_toEndOf="@+id/harvestSkillBonus2"
+            app:layout_constraintStart_toStartOf="@+id/harvestSkillBonus2" />
+
+        <TextView
+            android:id="@+id/harvestSkillBonus3Level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0/7"
+            app:layout_constraintBottom_toBottomOf="@+id/harvestSkillBonus3"
+            app:layout_constraintEnd_toEndOf="@+id/harvestSkillBonus3"
+            app:layout_constraintStart_toStartOf="@+id/harvestSkillBonus3" />
+
+        <ImageView
+            android:id="@+id/selectedSkillImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/skillDescription"
+            app:layout_constraintTop_toTopOf="@+id/skillDescription" />
+
+        <TextView
+            android:id="@+id/selectedSkillPriceText1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="100"
+            android:textAlignment="textEnd"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/skillDescription"
+            app:layout_constraintEnd_toStartOf="@+id/selectedSkillPriceIcon1"
+            app:layout_constraintStart_toStartOf="@+id/skillDescription"
+            app:layout_constraintTop_toBottomOf="@+id/selectedSkillImage" />
+
+        <TextView
+            android:id="@+id/selectedSkillPriceText2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:text="100"
+            android:textAlignment="textEnd"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/selectedSkillPriceIcon1"
+            app:layout_constraintEnd_toStartOf="@id/selectedSkillPriceIcon2"
+            app:layout_constraintStart_toEndOf="@+id/selectedSkillPriceIcon1"
+            app:layout_constraintTop_toTopOf="@+id/selectedSkillPriceIcon1"
+            app:layout_constraintVertical_bias="0.526" />
+
+        <TextView
+            android:id="@+id/selectedSkillPriceText3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:text="100"
+            android:textAlignment="textEnd"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/selectedSkillPriceIcon2"
+            app:layout_constraintEnd_toStartOf="@+id/selectedSkillPriceIcon3"
+            app:layout_constraintStart_toEndOf="@+id/selectedSkillPriceIcon2"
+            app:layout_constraintTop_toTopOf="@+id/selectedSkillPriceIcon2" />
+
+        <ImageView
+            android:id="@+id/selectedSkillPriceIcon1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:scaleType="fitStart"
+            app:layout_constraintBottom_toBottomOf="@+id/selectedSkillPriceText1"
+            app:layout_constraintEnd_toStartOf="@id/selectedSkillPriceText2"
+            app:layout_constraintStart_toEndOf="@id/selectedSkillPriceText1"
+            app:layout_constraintTop_toTopOf="@+id/selectedSkillPriceText1" />
+
+        <ImageView
+            android:id="@+id/selectedSkillPriceIcon2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:scaleType="fitStart"
+            app:layout_constraintBottom_toBottomOf="@+id/selectedSkillPriceText2"
+            app:layout_constraintEnd_toStartOf="@+id/selectedSkillPriceText3"
+            app:layout_constraintStart_toEndOf="@+id/selectedSkillPriceText2"
+            app:layout_constraintTop_toTopOf="@+id/selectedSkillPriceText2"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/selectedSkillPriceIcon3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:scaleType="fitStart"
+            app:layout_constraintBottom_toBottomOf="@+id/selectedSkillPriceText3"
+            app:layout_constraintEnd_toEndOf="@+id/skillDescription"
+            app:layout_constraintStart_toEndOf="@+id/selectedSkillPriceText3"
+            app:layout_constraintTop_toTopOf="@+id/selectedSkillPriceText3" />
+
+        <TextView
+            android:id="@+id/selectedSkillDescription"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/selectedSkillImage"
+            app:layout_constraintEnd_toEndOf="@+id/skillDescription"
+            app:layout_constraintStart_toEndOf="@+id/selectedSkillImage"
+            app:layout_constraintTop_toTopOf="@+id/skillDescription" />
+
+        <ImageView
+            android:id="@+id/backFromHarvestSkillTree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/back" />
+
+        <ImageView
+            android:id="@+id/buyHarvestSkill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/buy" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/harvestMainPane"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:visibility="gone">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/plantsInPossession"
+            android:layout_width="0dp"
+            android:layout_height="84dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="#471003"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/daisyIcon6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/mushroomCount"
+                app:layout_constraintEnd_toEndOf="@+id/daisyIcon5"
+                app:layout_constraintStart_toEndOf="@+id/mushroomCount"
+                app:layout_constraintTop_toTopOf="@+id/mushroomCount"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/justmushroom" />
+
+            <ImageView
+                android:id="@+id/daisyIcon5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/watergrassCount"
+                app:layout_constraintEnd_toStartOf="@+id/centaureaCount"
+                app:layout_constraintStart_toEndOf="@+id/watergrassCount"
+                app:layout_constraintTop_toTopOf="@+id/watergrassCount"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/justwatergrass" />
+
+            <ImageView
+                android:id="@+id/daisyIcon7"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/centaureaCount"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/centaureaCount"
+                app:layout_constraintTop_toTopOf="@+id/centaureaCount"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/justchabr" />
+
+            <ImageView
+                android:id="@+id/daisyIcon3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/sunflowerCount"
+                app:layout_constraintEnd_toStartOf="@+id/watergrassCount"
+                app:layout_constraintStart_toEndOf="@+id/sunflowerCount"
+                app:layout_constraintTop_toTopOf="@+id/sunflowerCount"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/justsunflower" />
+
+            <ImageView
+                android:id="@+id/daisyIcon4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tulipsCount"
+                app:layout_constraintEnd_toEndOf="@+id/daisyIcon3"
+                app:layout_constraintStart_toEndOf="@+id/tulipsCount"
+                app:layout_constraintTop_toTopOf="@+id/tulipsCount"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/justtulip" />
+
+            <TextView
+                android:id="@+id/sunflowerCount"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="-1"
+                android:textAlignment="textEnd"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/tulipsCount"
+                app:layout_constraintEnd_toStartOf="@+id/daisyIcon3"
+                app:layout_constraintStart_toEndOf="@+id/daisyIcon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/mushroomCount"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="-1"
+                android:textAlignment="textEnd"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/daisyIcon6"
+                app:layout_constraintStart_toEndOf="@+id/daisyIcon4"
+                app:layout_constraintTop_toBottomOf="@+id/watergrassCount" />
+
+            <TextView
+                android:id="@+id/watergrassCount"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="-1"
+                android:textAlignment="textEnd"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/mushroomCount"
+                app:layout_constraintEnd_toStartOf="@+id/daisyIcon5"
+                app:layout_constraintStart_toEndOf="@+id/daisyIcon3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/centaureaCount"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:text="-1"
+                android:textAlignment="textEnd"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/watergrassCount"
+                app:layout_constraintEnd_toStartOf="@+id/daisyIcon7"
+                app:layout_constraintStart_toEndOf="@+id/daisyIcon5"
+                app:layout_constraintTop_toTopOf="@+id/watergrassCount" />
+
+            <TextView
+                android:id="@+id/tulipsCount"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="-1"
+                android:textAlignment="textEnd"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/daisyIcon4"
+                app:layout_constraintStart_toEndOf="@+id/daisyIcon2"
+                app:layout_constraintTop_toBottomOf="@+id/sunflowerCount" />
+
+            <TextView
+                android:id="@+id/daisyCount"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="0"
+                android:textAlignment="textEnd"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/roseCount"
+                app:layout_constraintEnd_toStartOf="@+id/daisyIcon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/daisyIcon"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/daisyCount"
+                app:layout_constraintEnd_toStartOf="@+id/sunflowerCount"
+                app:layout_constraintStart_toEndOf="@+id/daisyCount"
+                app:layout_constraintTop_toTopOf="@+id/daisyCount"
+                app:srcCompat="@drawable/justdaisy" />
+
+            <TextView
+                android:id="@+id/roseCount"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="0"
+                android:textAlignment="textEnd"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/daisyIcon2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/daisyCount" />
+
+            <ImageView
+                android:id="@+id/daisyIcon2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/roseCount"
+                app:layout_constraintEnd_toEndOf="@+id/daisyIcon"
+                app:layout_constraintStart_toEndOf="@+id/roseCount"
+                app:layout_constraintTop_toTopOf="@+id/roseCount"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/justrose" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/pickPlant"
+            android:layout_width="240dp"
+            android:layout_height="124dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="#652502"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/plant">
+
+            <ImageView
+                android:id="@+id/plant5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/plant6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/plant1"
+                app:srcCompat="@drawable/watergrass" />
+
+            <ImageView
+                android:id="@+id/plant1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toTopOf="@+id/plant5"
+                app:layout_constraintEnd_toStartOf="@+id/plant2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/daisy" />
+
+            <ImageView
+                android:id="@+id/plant6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/plant7"
+                app:layout_constraintStart_toEndOf="@+id/plant5"
+                app:layout_constraintTop_toBottomOf="@+id/plant2"
+                app:srcCompat="@drawable/mushrom" />
+
+            <ImageView
+                android:id="@+id/plant7"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/plant8"
+                app:layout_constraintStart_toEndOf="@+id/plant6"
+                app:layout_constraintTop_toBottomOf="@+id/plant3"
+                app:srcCompat="@drawable/chabr" />
+
+            <ImageView
+                android:id="@+id/plant8"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/plant7"
+                app:layout_constraintTop_toBottomOf="@+id/plant4"
+                app:srcCompat="@drawable/base" />
+
+            <ImageView
+                android:id="@+id/plant2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toTopOf="@+id/plant6"
+                app:layout_constraintEnd_toStartOf="@+id/plant3"
+                app:layout_constraintStart_toEndOf="@+id/plant1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/rose" />
+
+            <ImageView
+                android:id="@+id/plant3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toTopOf="@+id/plant7"
+                app:layout_constraintEnd_toStartOf="@+id/plant4"
+                app:layout_constraintStart_toEndOf="@+id/plant2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/sunflower" />
+
+            <ImageView
+                android:id="@+id/plant4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toTopOf="@+id/plant8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/plant3"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/tulips" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/plant"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/water"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/water"
+            app:srcCompat="@drawable/base" />
+
+        <ImageView
+            android:id="@+id/water"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/harvest"
+            app:layout_constraintHorizontal_bias="0.517"
+            app:layout_constraintStart_toEndOf="@+id/plant"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/base" />
+
+        <ImageView
+            android:id="@+id/harvest"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/water"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/water"
+            app:srcCompat="@drawable/base" />
+
+        <ImageView
+            android:id="@+id/actualAction"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/back"
+            app:layout_constraintTop_toTopOf="@+id/back"
+            app:srcCompat="@drawable/skillbook" />
+
+        <LinearLayout
+            android:id="@+id/column"
+            android:layout_width="0dp"
+            android:layout_height="434dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/water"
+            tools:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/row1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/field1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/base" />
+
+                <ImageView
+                    android:id="@+id/field2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/base" />
+
+                <ImageView
+                    android:id="@+id/field3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/base" />
+
+                <ImageView
+                    android:id="@+id/field4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/base" />
+
+                <ImageView
+                    android:id="@+id/field5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/base" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/field6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/base" />
+
+                <ImageView
+                    android:id="@+id/field7"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/base" />
+
+                <ImageView
+                    android:id="@+id/field8"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/base" />
+
+                <ImageView
+                    android:id="@+id/field9"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/base" />
+
+                <ImageView
+                    android:id="@+id/field10"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/base" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/field11"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/base" />
+
+                <ImageView
+                    android:id="@+id/field12"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/base" />
+
+                <ImageView
+                    android:id="@+id/field13"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/base" />
+
+                <ImageView
+                    android:id="@+id/field14"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/base" />
+
+                <ImageView
+                    android:id="@+id/field15"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/base" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row4"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/field16"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/base" />
+
+                <ImageView
+                    android:id="@+id/field17"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/base" />
+
+                <ImageView
+                    android:id="@+id/field18"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/base" />
+
+                <ImageView
+                    android:id="@+id/field19"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/base" />
+
+                <ImageView
+                    android:id="@+id/field20"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/base" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row5"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/field21"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/base" />
+
+                <ImageView
+                    android:id="@+id/field22"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/base" />
+
+                <ImageView
+                    android:id="@+id/field23"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/base" />
+
+                <ImageView
+                    android:id="@+id/field24"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/base" />
+
+                <ImageView
+                    android:id="@+id/field25"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/base" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row6"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/field26"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/base" />
+
+                <ImageView
+                    android:id="@+id/field27"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/base" />
+
+                <ImageView
+                    android:id="@+id/field28"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/base" />
+
+                <ImageView
+                    android:id="@+id/field29"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/base" />
+
+                <ImageView
+                    android:id="@+id/field30"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/base" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/showPlantsInPossesion"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/back"
+            app:layout_constraintEnd_toStartOf="@+id/back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/back"
+            app:srcCompat="@drawable/bag" />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/back" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
